@@ -1,0 +1,10 @@
+*.vcxproj*
+.vs/*
+*.dll
+*.exp
+*.ilk
+*.pdb
+*.lib
+obj/*
+*.make
+*.rc
