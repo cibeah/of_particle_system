@@ -11,6 +11,7 @@ public:
 	void display();
 	void step();
 	void grow(int growth);
+	void update();
 
 	bool isDead();
 
@@ -26,10 +27,14 @@ private:
 	glm::vec2 m_location;
 	glm::vec2 m_velocity;
 	glm::vec2 m_acceleration;
+	glm::vec2 m_new_location;
+	glm::vec2 m_new_velocity;
+	glm::vec2 m_new_acceleration;
 	float m_size;
 	float m_mass;
 	int m_lifespan;
 	glm::vec3 m_color;
+	glm::vec3 m_new_color;
 	float m_color_norm;
 	float m_environment_width;
 	float m_environment_height;

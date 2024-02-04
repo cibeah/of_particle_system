@@ -48,14 +48,19 @@ void ParticlesSystem::update(int radius = 15) {
 		}
 		else {
 			(*it).get_neighbors(m_elements, radius);
+			// Compute new locations for every one
+			(*it).step();
 			//(*it).test(m_elements, radius);
 			it++;
 		}
 	};
+	
+	// Then update all locations
 	for (list<Particle>::iterator it = m_elements.begin(); it != m_elements.end();)
 	{
-		(*it).step();
-		//ofLog(OF_LOG_NOTICE, "Growing 1 element ");
+		(*it).update();
 		it++;
 	};
+
+	
 };

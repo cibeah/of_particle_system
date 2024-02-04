@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-	numel = 500;
+	numel = 2000;
 	ps = ParticlesSystem(numel);
 	//ofResetElapsedTimeCounter();
 	timer = 0;
